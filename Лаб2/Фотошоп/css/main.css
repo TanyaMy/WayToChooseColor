@@ -1,0 +1,36 @@
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+#main {
+	background: url(../img/psBackground.png) no-repeat center top;
+  	height:100%;
+	padding-top:80px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+}
+
+#picture{
+    background: url(../img/picture.jpg) no-repeat center top;
+	padding-top:80px;
+    margin-left: 20%;
+	background-attachment: relative;
+	background-position: left center;
+	min-height: 650px;
+}
+
+#picture{
+}
