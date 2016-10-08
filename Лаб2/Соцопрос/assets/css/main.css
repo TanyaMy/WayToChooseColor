@@ -390,16 +390,10 @@ a:after {
 	}
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   width: 30px;
   height: 30px;
 }
-
-.radio + label {
-  cursor: pointer;
-}
-
-
 
 label{
     font-style: oblique;

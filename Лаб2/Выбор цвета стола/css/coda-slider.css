@@ -140,10 +140,26 @@ td{
     color: peachpuff;
 }
 
-.oak .pine .nut .maxagon .black_tree .teak:hover{
-    border: 2;    
-    border-color: yellow;
+
+#teak:hover{  
+    -webkit-transform: scale(1.2);
 }
+#black_tree:hover{  
+    -webkit-transform: scale(1.2);
+}
+#maxagon:hover{  
+    -webkit-transform: scale(1.2);
+}
+#nut:hover{  
+    -webkit-transform: scale(1.2);
+}
+#pine:hover{  
+    -webkit-transform: scale(1.2);
+}
+#oak:hover{  
+    -webkit-transform: scale(1.2);
+}
+
 
 #text{
     margin: 20px 20px 20px 0px;
@@ -165,4 +181,8 @@ td{
 .button:hover {
     background-color: #4CAF50; /* Green */
     color: greenyellow;
+}
+
+td{
+    padding: 4px;
 }

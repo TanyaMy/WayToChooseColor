@@ -92,37 +92,6 @@ em { color: #bea68e; }
 	margin-right: 60px;
 }
 
-.service_list { margin: 40px 0 0 30px; padding: 0; list-style: none; }
-.service_list li { margin: 0; padding: 0; }
-.service_list li a { font-size: 16px; display: block; height: 25px; margin-bottom: 20px; padding-left: 40px; text-decoration: none; }
-.service_list li .service_one { background: url(images/onebit_08.png) center left no-repeat; }
-.service_list li .service_two { background: url(images/onebit_11.png) center left no-repeat; }
-.service_list li .service_three { background: url(images/onebit_17.png) center left no-repeat; }
-.service_list li .service_four { background: url(images/onebit_21.png) center left no-repeat; }
-.service_list li .service_five { background: url(images/onebit_12.png) center left no-repeat; }
 
-#contact_form {  padding: 0; }
-#contact_form form { margin: 0px; padding: 0px; }
-#contact_form form .input_field { color: #FFFFFF; width: 300px; padding: 3px; background: #121e25; border: 1px solid #000; }
 
-#contact_form form label { display: block; width: 100px; margin-right: 10px; font-size: 14px; }
-#contact_form form textarea { color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; width: 360px; height: 145px; padding: 3px; background: #121e25; border: 1px solid #000; }
-#contact_form form .submit_button { color: #FFFFFF; margin: 5px 60px 0px 0px; padding: 5px 10px; background: #121e25; border: 1px solid #000; }
-
-#gallery_container { clear: both; margin-top: 30px; padding-right: 40px; width: 780px; height: 320px; overflow: auto; } 
-#gallery_container .gallery_box {
-	clear: both;
-	display: block; 
-	padding: 0;
-	margin: 0 0 40px 0;
-}
- 
-.gallery_box img {
-	float: left;
-	width: 280px;
-	height: 100px;
-	padding: 4px;
-	background: #1b2c35;
-	border: 1px solid #0b1418;
-	margin: 3px 30px 0 0;
-}
+#

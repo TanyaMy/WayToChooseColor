@@ -23,14 +23,29 @@ body {
 	width: 100%;
 }
 
-#picture{
-    background: url(../img/picture.jpg) no-repeat center top;
-	padding-top:80px;
-    margin-left: 20%;
-	background-attachment: relative;
-	background-position: left center;
-	min-height: 650px;
+
+table{
+    border-color: red;
 }
 
 #picture{
+    margin: 80px;
+}
+
+#brush{
+    width: 300px;
+    height: 200px;
+    margin-left: 120px;
+}
+
+#text{
+    color: aqua;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+input[type="color"] {
+    margin-top: 20px;
+    width:30%;
+    margin-left: -25%;
 }

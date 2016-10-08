@@ -15,12 +15,30 @@
 
   <body data-spy="scroll" data-offset="0">
       <div id="main">
-          
-          <div id="picture">
-          </div>
-          <div id="text">
-              Choose the color for your brush:
-          </div>
+          <table align="center">
+              <tr>
+                  <td rowspan="4">
+                      <div>
+                        <img src="img/picture.jpg" id="picture"/>
+                      </div>
+                  </td>
+                  <td>
+                      <div id="text">
+                        Choose the color of your brush:
+                      </div>
+                  </td>
+                </tr>
+              <tr>
+                  <td>
+                      <img src="img/brush.png" id="brush"/>
+                      <input type="color" id="myColor" autofocus style="border-color:white; border-width:0; "/>
+                  </td>
+              </tr>              
+              
+          </table>
       </div>
+      <script type="text/javascript">
+        document.getElementById("myColor").value = "#00ffff"
+      </script>
   </body>
 </html>
