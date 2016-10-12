@@ -4,41 +4,86 @@
     <meta charset="utf-8">
 
     <title>Photoshop</title>
-
+     
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles-->
-    <link href="css/main.css" rel="stylesheet">    
+    <link href="css/main.css" rel="stylesheet">     
     
   </head>
 
   <body data-spy="scroll" data-offset="0">
-      <div id="main">
-          <table align="center">
+      <div id="main">           
+          <table>
               <tr>
-                  <td rowspan="4">
-                      <div>
-                        <img src="img/picture.jpg" id="picture"/>
-                      </div>
-                  </td>
+               <td rowspan="4">
+                   <div id="sketch">
+                  <canvas id="paint"></canvas>                
+                  </div>
+              </td>
                   <td>
                       <div id="text">
                         Choose the color of your brush:
                       </div>
                   </td>
-                </tr>
+              </tr>
               <tr>
+              <div>
                   <td>
-                      <img src="img/brush.png" id="brush"/>
-                      <input type="color" id="myColor" autofocus style="border-color:white; border-width:0; "/>
-                  </td>
-              </tr>              
-              
+                  <img src="img/brush.png" id="brush"/>
+                          <input type="color" id="color" autofocus style="border-color:white; border-width:0; " onchange="myFunction()"/>
+                 </td>
+              </div>
+              </tr>
           </table>
       </div>
+     
       <script type="text/javascript">
-        document.getElementById("myColor").value = "#00ffff"
+        document.getElementById("color").value = "#00ffff"
+        
+         var canvas = document.querySelector('#paint');
+        var ctx = canvas.getContext('2d');
+
+        var sketch = document.querySelector('#sketch');
+        var sketch_style = getComputedStyle(sketch);
+        canvas.width = 600;
+        canvas.height =550;
+        var mouse = {x: 0, y: 0};
+ 
+        /* Mouse Capturing Work */
+        canvas.addEventListener('mousemove', function(e) {
+          mouse.x = e.pageX - this.offsetLeft - 50;
+          mouse.y = e.pageY - this.offsetTop - 50;
+        }, false);
+        
+        /* Drawing on Paint App */
+        ctx.lineWidth = 3;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = document.getElementById("color").value;
+
+        canvas.addEventListener('mousedown', function(e) {
+            ctx.beginPath();
+            ctx.moveTo(mouse.x, mouse.y);
+
+            canvas.addEventListener('mousemove', onPaint, false);
+        }, false);
+
+        canvas.addEventListener('mouseup', function() {
+            canvas.removeEventListener('mousemove', onPaint, false);
+        }, false);
+
+        var onPaint = function() {
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+        };
+        
+        function myFunction()
+        {
+             ctx.strokeStyle = document.getElementById("color").value;
+        }
+        
       </script>
   </body>
 </html>
